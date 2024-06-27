@@ -19,6 +19,13 @@ app.get('/qr', (req, res) => {
     res.sendFile(path.join(__path, '/public/qr.html'));
 });
 
+app.get('/update-session', (req, res) => {
+    res.sendFile(path.join(__path, '/public/updateSession.html'));
+});
+
+let updateSession = require('./updateSession');
+app.use('/sid', updateSession);
+
 let qrCode = require('./qr');
 app.use('/qr-code', qrCode);
 
