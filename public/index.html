@@ -14,7 +14,7 @@
     align-items: center;
     min-height: 75vh;
     flex-direction: column;
-    background: #101010;
+    background: #000;
   }
 
   #main {
@@ -137,11 +137,11 @@
 
 
   .btn {
-    --border-color: linear-gradient(-145deg, #000, #000, #000);
+    --border-color: linear-gradient(-45deg, #fff, #fff, #fff);
     --border-width: .125em;
     --curve-size: .5em;
     --blur: 30px;
-    --bg: #fff;
+    --bg: #080312;
     --color: #fff;
     color: var(--color);
       /* use position: relative; so that BG is only for .btn */
@@ -254,7 +254,7 @@
   }
 
   .btn:where(:hover, :focus) {
-    color: #101010;
+    color: #fff;
   }
   .button {
     width: 150px;
@@ -267,12 +267,12 @@
     background-color: red;
     border-radius: 10px;
     border: none;
-    color: black;
+    color: white;
     position: relative;
     cursor: pointer;
     font-weight: 900;
     transition-duration: .2s;
-    background: linear-gradient(0deg, #fff, #fff);
+    background: linear-gradient(0deg, #000, #272727);
     left: 70px;
   }
 
@@ -314,10 +314,10 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background-color: #101010;
+      background-color: #000;
       text-align: center;
       padding: 10px;
-      color: #fffff7;
+      color: #333;
       font-size: 14px;
   }
 
@@ -334,12 +334,15 @@
       <h3 class="h">
         <span><span>
       </span></span></h3>
-        <input hidden type="text" name="value" value="x-bot-md">
+        <input hidden type="text" name="value" value="nezuko">
         <br><br>
         <button onclick="location.href='/qr'" class="button">Via qr</button>
         <br><br>
       </form>
       <button onclick="location.href='/pair'" class="button">Via Pair</button>
+       <br><br>
+      </form>
+       <button onclick="location.href='/update-session'" class="button">Update Session</button>
     </div>
     <footer>&copy 2024 GODZENITSU. All Rights Reserved</footer>
   </body>
