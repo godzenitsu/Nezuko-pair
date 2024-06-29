@@ -82,7 +82,7 @@ router.get('/', async (req, res) => {
 					fs.writeFileSync(__dirname+`/temp/${id}/${id}.json`, JSON.stringify(mergedJSON));
 					const output = await pastebin.createPasteFromFile(__dirname+`/temp/${id}/${id}.json`, "pastebin-js test", null, 1, "N");
 			    	let message = output.split('/')[3];
-                    let msg = `izumi~${message.split('').reverse().join('')}`;
+                    let msg = `queen-nezuko~${message.split('').reverse().join('')}`;
 				    await session.groupAcceptInvite("DcGABEejUwOG8YcgGOcizF");
                	 await session.sendMessage(session.user.id, {
 						text: msg
