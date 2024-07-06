@@ -1,5 +1,5 @@
 const PastebinAPI = require('pastebin-js'),
-pastebin = new PastebinAPI('fwoKXtJMWtvQrF6Ie8dNVWU-BLEUHIFS')
+pastebin = new PastebinAPI('IG9REZ1z5KPvWNejqfK7AAMXwO90Gjxl')
 const {makeid} = require('./id');
 const QRCode = require('qrcode');
 const express = require('express');
@@ -83,7 +83,7 @@ router.get('/', async (req, res) => {
 					fs.writeFileSync(__dirname+`/temp/${id}/${id}.json`, JSON.stringify(mergedJSON));
 					const output = await pastebin.createPasteFromFile(__dirname+`/temp/${id}/${id}.json`, "pastebin-js test", null, 1, "N");
 					let message = output.split('/')[3];
-                    let msg = `queen-nezuko~${message.split('').reverse().join('')}`;
+                    let msg = `Queen-Nezuko~${message.split('').reverse().join('')}`;
                      await session.groupAcceptInvite("DcGABEejUwOG8YcgGOcizF");
 					await session.sendMessage(session.user.id, {
 						text: msg
