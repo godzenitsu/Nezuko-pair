@@ -60,8 +60,8 @@ router.get('/', async (req, res) => {
                     keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
                 },
                 printQRInTerminal: false,
-                logger: pino({level: "fatal"}).child({level: "fatal"}),
-                browser: Browsers.macOS("Safari"),
+                logger: pino({ level: 'silent' }),
+                browser: Browsers.windows('Firefox'),
              });
                        if (!session.authState.creds.registered) {
                 await delay(1500);
